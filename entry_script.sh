@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt install docker -y
+sudo yum update -y
+sudo yum upgrade -y
+sudo yum install docker -y
 sudo systemctl start docker
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker ec2-user

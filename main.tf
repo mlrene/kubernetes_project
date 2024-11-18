@@ -7,14 +7,14 @@ resource "aws_instance" "docker_server" {
 
   connection {
     type = "ssh"
-    user = "ubuntu"
+    user = "ec2-user"
     host = self.public_ip
     private_key = file("private-Key.pem")
   }
 
   provisioner "file" {
     source = "Dockerfile"
-    destination = "/home/ubuntu/Dockerfile"
+    destination = "/home/ec2-user/Dockerfile"
   }
 
   tags = {
