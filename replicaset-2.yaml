@@ -1,5 +1,5 @@
-kind: ReplicaSet
 apiVersion: apps/v1
+kind: ReplicaSet
 metadata:
   name: rene-rs
   labels:
@@ -11,6 +11,7 @@ spec:
       name: rene
   template:
     metadata:
+      name: rene-pod
       labels:
         name: rene
     spec:

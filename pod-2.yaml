@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
-  labels:
-    app: nginx-wed
+  name: rene
+  namespace: default
 spec:
   containers:
-  - name: nginx
+  - name: rene-container
     image: nginx:latest
     ports:
     - containerPort: 80

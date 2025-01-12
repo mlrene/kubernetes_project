@@ -26,3 +26,35 @@ spec:
             secretKeyRef:
               name: docker-registry-secret-1
               key: DOCKER_PASSWORD
+
+
+# apiVersion: apps/v1
+# kind: ReplicaSet
+# metadata:
+#   name: rene-rs
+# spec:
+#   replicas: 2
+#   selector:
+#     matchLabels:
+#       name: rene
+#   template:
+#     metadata:
+#       labels:
+#         name: rene
+#     spec:
+#       containers:
+#       - name: rene-docker-container
+#         image: mlrene/indian-lady:latest
+#         env:
+#         - name: DOCKER_USERNAME
+#           value: mlrene
+#         - name: DOCKER_PASSWORD
+#           valueFrom:
+#             secretKeyRef:
+#               name: docker-credentials
+#               key: DOCKER_PASSWORD
+#         - name: DOCKER_SERVER
+#           value: https://index.docker.io/v1/
+#       imagePullSecrets:
+#       - name: docker-credentials-secret
+
