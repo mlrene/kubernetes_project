@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  nginx-deployment
+  name:  rene-deployment
   labels:
-    app:  nginx-deployment
+    app: rene
 spec:
   replicas: 5
   selector: 
     matchLabels:
-      app: nginx-deployment
+      app: rene
   template:
     metadata:
       labels:
-        app:  nginx-deployment
+        app: rene
     spec:
       containers:
-      - name:  nginx-deployment
-        image: nginx:latest 
+      - name:  rene-deployment-container
+        image: mlrene/carvilla_image:v1.0
         ports:
-        - containerPort:  80
+        - containerPort: 80

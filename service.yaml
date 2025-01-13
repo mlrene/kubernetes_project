@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rene-app-service
+spec:
+  selector:
+    app: rene
+  ports:
+  - protocol: TCP
+    port: 80           # The port the Service exposes
+    targetPort: 80   # Maps to the container's port
+  type: NodePort       # Makes the app accessible from outside the cluster
