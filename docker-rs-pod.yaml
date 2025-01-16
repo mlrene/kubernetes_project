@@ -27,7 +27,6 @@ spec:
               name: docker-registry-secret-1
               key: DOCKER_PASSWORD
 
-
 # apiVersion: apps/v1
 # kind: ReplicaSet
 # metadata:
